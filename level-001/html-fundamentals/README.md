@@ -7,7 +7,7 @@ Aprender quais tags são necessárias para um HTML básico
 Desafios:
 
 - [ ] Criar um parágrafo de texto
-- [ ]  Exibir uma imagem
+- [ ] Exibir uma imagem
 - [ ] Conhecer a diferença entre 'h1', 'h2', 'h3', etc
 - [ ] Criar um texto com hyperlink
 - [ ] Criar um formulário com campos relevantes
