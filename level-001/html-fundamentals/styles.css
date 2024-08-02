@@ -1,0 +1,77 @@
+/* Reset de estilos básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 16px;
+  background-color: FFFFFF;
+  color: #667085;
+  font-style: normal;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  background-color: FFFFFF;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  height: 44px;
+  background-color: FFFFFF;
+}
+
+.menu-content ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex
+}
+
+.menu-content li {
+  margin-right: 10px;
+}
+
+.menu-content li:last-child {
+  margin-right: 0;
+}
+
+.menu-content li a {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #667085;
+}
+
+.navigation-action button {
+  margin-top: auto;
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 112px;
+  height: 44px;
+  cursor: pointer;
+}
+
+button.botao-entrar {
+  background-color: transparent;
+  color: #667085;
+  text-decoration: none;
+}
+
+button.botao-cadastro {
+  background-color: #8E2424;
+  color: #FFFFFF;
+  border-radius: 7px;
+}
