@@ -7,42 +7,45 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 16px;
-  background-color: FFFFFF;
+  background-color: #FFFFFF;
+  /* Adicione o sinal de # para a cor branca */
   color: #667085;
   font-style: normal;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: FFFFFF;
+  background-color: #FFFFFF;
+  /* Adicione o sinal de # para a cor branca */
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1280px;
-  height: 44px;
-  background-color: FFFFFF;
+  width: 100%;
+  /* Altere para 100% para ocupar toda a largura disponível */
+  max-width: 1280px;
+  /* Adiciona um limite máximo de largura */
+  padding: 0 20px;
+  /* Adiciona espaçamento lateral */
 }
 
 .menu-content ul {
   list-style-type: none;
   padding: 0;
-  display: flex
+  display: flex;
+  gap: 10px;
+  /* Substitui a margem entre os itens do menu */
 }
 
 .menu-content li {
   margin-right: 10px;
-}
-
-.menu-content li:last-child {
-  margin-right: 0;
 }
 
 .menu-content li a {
@@ -53,7 +56,6 @@ body {
 }
 
 .navigation-action button {
-  margin-top: auto;
   padding: 10px 20px;
   border: none;
   text-align: center;
@@ -67,11 +69,61 @@ body {
 button.botao-entrar {
   background-color: transparent;
   color: #667085;
-  text-decoration: none;
 }
 
 button.botao-cadastro {
   background-color: #8E2424;
   color: #FFFFFF;
   border-radius: 7px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Empilha os itens verticalmente */
+    align-items: flex-start;
+    /* Alinha os itens ao início */
+  }
+
+  .menu-content ul {
+    flex-direction: column;
+    /* Alinha os itens do menu verticalmente */
+    width: 100%;
+    /* Ocupa toda a largura disponível */
+  }
+
+  .menu-content li {
+    margin: 10px 0;
+    /* Adiciona margem vertical entre os itens do menu */
+  }
+
+  .navigation-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Espaço entre os botões */
+    margin-top: 20px;
+    /* Espaço acima dos botões */
+  }
+
+  .button-base,
+  .logotype {
+    margin-bottom: 20px;
+    /* Espaço abaixo dos logotipos */
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-action button {
+    width: 100%;
+    /* Botões ocupam toda a largura disponível */
+    font-size: 14px;
+    /* Reduz o tamanho da fonte */
+  }
+
+  .menu-content li a {
+    padding: 8px;
+    /* Reduz o padding dos links do menu */
+  }
 }
