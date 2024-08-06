@@ -27,6 +27,15 @@ O primeiro item a ser desenvolvido é o cabeçalho da aplicação, chamado norma
 
 ![Exemplo da Navbar](https://ci3.googleusercontent.com/meips/ADKq_NYFZM0-AmHIqSPWoH7pIFRVFVqSnMgbU3wvCPLO0wQ1I6FyCRLc1TpILBYn_pNqeyHA8PH4rI_cYZIE8x3sUlNBCXlSEt27v_PUpEkkj8mbsDCQnsTL29D5_kUfSV_29ex4nJIb33u_Z5zkkPP36iNO88wPOMvFiF6AYbXnQ2WIiQkHIHnBHmQJxbW8ht5g6JxnEMLXA7G0zQsLm3m5RULCfSPzT44keLPtFWPLxP4=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/98d51df9-0193-482c-83ea-ae23cf5c8e0b.png?width=1024&upscale=true&name=98d51df9-0193-482c-83ea-ae23cf5c8e0b.png)
 
+### Segunda Tarefa: Primeira Seção
+
+O segundo item a ser desenvolvido é a primeira seção da aplicação, chamado normalmente de "cabeçalho", que contempla:
+- Sobre nós
+- Titulo
+- Descrição
+
+![Exemplo da Cabeçalho](https://ci3.googleusercontent.com/meips/ADKq_Nb5uxKPkMH6Pr1sKE2OHr7P2dVVSkd6ysCJiclydD0yKzV7ncYZwHxHT4neCyvzFdHF5BO_2u9VF1Kuq1iDPUooltMBT7XKI00QmKQm5CEvJEuU-Kca7VEQedekWSlyXwea2WcVhPPsUJroeoFkQe_BKxjL7HbF44DjkSqankv8E5IVrCqBh0odg9jf1iirKF2XYDTJ67LYdDx-PQidRR-WVEKRVJq3-BIbqRyIE-E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/eeb042c7-db04-4344-9a77-f90d3489dae0.png?width=1024&upscale=true&name=eeb042c7-db04-4344-9a77-f90d3489dae0.png)
+
 ## Instalação
 
 Para rodar o projeto localmente, siga os passos abaixo:
