@@ -48,6 +48,12 @@ O quarto item desenvolvido é a página de busca de talentos da empresa com a im
 
 ![Exemplo de Talentos](https://ci3.googleusercontent.com/meips/ADKq_Nblz-E81su_gZ93YsLc2g2L3FY10rxkO0gyKKSyRZo7oPXrWw1JubKaL6m2mdCLN-7ISQ9a8-8-9u2cAkXn9AaSFpjOPCVPWmRgJt5afaiqqIomgStcN1CjWQSJ1KA6yGjlP76ufnJK6afBvptFU6AZixcprivVMFzxDnlYHixKMMylg5471ZdKlRyixanOLsQ6CohR-htjKTTIT8E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/Design%20sem%20nome%20(6)-1.png?width=1120&upscale=true&name=Design%20sem%20nome%20(6)-1.png)
 
+### Quinta Tarefa: Seção de vagas
+
+O quinto item desenvolvido é a lista de vagas disponiveis na empresa em formato de cards.
+
+![Exemplo de Vagas](./images/vagas-card.png)
+
 ## Instalação
 
 Para rodar o projeto localmente, siga os passos abaixo:
