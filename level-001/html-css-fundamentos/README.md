@@ -20,7 +20,7 @@ Uma empresa de TI contratou você para desenvolver uma página destinada a novas
 
 ### Primeira Tarefa: Navbar
 
-O primeiro item a ser desenvolvido é o cabeçalho da aplicação, chamado normalmente de Navbar, que contempla:
+O primeiro item desenvolvido é o cabeçalho da aplicação, chamado normalmente de Navbar, que contempla:
 - Logo
 - Menu com as páginas
 - Dois botões no canto direito
@@ -29,12 +29,18 @@ O primeiro item a ser desenvolvido é o cabeçalho da aplicação, chamado norma
 
 ### Segunda Tarefa: Seção sobre nós
 
-O segundo item a ser desenvolvido é a primeira seção da aplicação, chamado normalmente de "cabeçalho", que contempla:
+O segundo item desenvolvido é a primeira seção da aplicação, chamado normalmente de "cabeçalho", que contempla:
 - Sobre nós
 - Titulo
 - Descrição
 
 ![Exemplo da Cabeçalho](https://ci3.googleusercontent.com/meips/ADKq_Nb5uxKPkMH6Pr1sKE2OHr7P2dVVSkd6ysCJiclydD0yKzV7ncYZwHxHT4neCyvzFdHF5BO_2u9VF1Kuq1iDPUooltMBT7XKI00QmKQm5CEvJEuU-Kca7VEQedekWSlyXwea2WcVhPPsUJroeoFkQe_BKxjL7HbF44DjkSqankv8E5IVrCqBh0odg9jf1iirKF2XYDTJ67LYdDx-PQidRR-WVEKRVJq3-BIbqRyIE-E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/eeb042c7-db04-4344-9a77-f90d3489dae0.png?width=1024&upscale=true&name=eeb042c7-db04-4344-9a77-f90d3489dae0.png)
+
+### Terceira Tarefa: Seção de métricas da página
+
+O terceiro item desenvolvido é a página de métricas da empresa, categorizada em 4 métricas diferentes, com um título, um subtítulo e um texto:
+
+![Exemplo da Metricas](https://ci3.googleusercontent.com/meips/ADKq_NZk4sM3zzI-mYhYgKUsV_eIwby3PXvfIubFttOoQ3TX5Ow2TjS7j8yhBDRdsx4qfT06hwuoTNe9SiwvTevB21_yP4O9vP4LdB1a35QtC6G3J4f0KDpOdNEKnWvdX46HvZI6LhC8ZGW0-QaXJ8J36x8N-dOazcpS1TWPdirnAemHbxC7fbQoOcqUU2kHq9RAb6fiKqd5d4B9zyzJdhWHrH-tPjsPqsqE_inQxaQYH9E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/e3450239-e8e9-4d55-aee5-0f0fd275302b.png?width=1024&upscale=true&name=e3450239-e8e9-4d55-aee5-0f0fd275302b.png)
 
 ## Instalação
 

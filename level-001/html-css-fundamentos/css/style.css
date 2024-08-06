@@ -147,5 +147,36 @@ nav {
     margin-bottom: 96px;
     line-height: 30px;
   }
+}
 
+.metricas-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+
+  div {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    margin: 0 10px;
+  }
+
+  .metricas-valores {
+    color: var(--main-color);
+    font-size: 60px;
+    margin-bottom: 24px;
+    line-height: 72px;
+  }
+
+  .metricas-titulo {
+    color: var(--black-color);
+    font-size: 18px;
+  }
+
+  .metricas-descricao {
+    gap: 16px;
+    line-height: 24px;
+    font-size: 16px;
+  }
 }
