@@ -11,6 +11,7 @@
   --main-color: #8E2424;
   --base-color: #FFFFFF;
   --black-color: #101828;
+  --card-color: #EAECF0;
 }
 
 body {
@@ -150,7 +151,7 @@ nav {
   line-height: 30px;
 }
 
-.metricas-container {
+.metricas {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -182,8 +183,48 @@ nav {
   }
 }
 
-.talentos-container {
+#equipe {
+  margin-bottom: 64px;
+}
+
+#talentos {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#vagas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1280px;
+
+  .vagas-container {
+    border: 1px solid var(--card-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .area-vaga {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 32px;
+    color: var(--black-color);
+  }
+
+  .titulo-vaga {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--black-color);
+  }
+
+  .informacoes {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .faixa-salarial {
+    padding: 10px;
+  }
 }
