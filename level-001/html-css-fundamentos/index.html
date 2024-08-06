@@ -3,53 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>7 days Of Code - HTML e CSS</title>
 </head>
 
 <body>
-
     <!-- NAVBAR -->
-    <div class="navbar">
-        <div class="header">
+    <nav>
+        <header>
             <div class="container">
-
-                <!-- BOTAO HOME -->
-                <div class="button-base">
-                    <img src="./images/button-base.svg" alt="Optimus Tech Logotype" />
-                </div>
-
-                <!-- LISTA DE MENU -->
+                <img src="./images/button-base.svg" alt="Optimus Tech Logotype" class="button-base" />
                 <div class="menu-content">
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Produtos</a></li>
-                        <li><a href="#resources">Recursos</a></li>
-                        <li><a href="#about">Sobre nós</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#sobre-nos">Sobre nós</a></li>
                     </ul>
                 </div>
-
-                <!-- LOGOTIPO -->
-                <div class="logotype">
-                    <img src="./images/Logo.png" alt="Logo" />
-                </div>
-
-                <!-- BOTAO DE NAVEGACAO - AÇÃO -->
+                <img src="./images/Logo.png" alt="Logo" class="logotype" />
                 <div class="navigation-action">
-                    <button type="button" class="botao-entrar">Entrar</button>
-                    <button type="button" class="botao-cadastro">Cadastrar</button>
+                    <button>Entrar</button>
+                    <button class="botao-cadastro">Cadastrar</button>
                 </div>
-
             </div>
-        </div>
-    </div>
+        </header>
+    </nav>
 
+    <!-- CABEÇALHO -->
+    <section class="cabecalho">
+        <h2 class="subheading">Sobre nós</h2>
+        <h1 class="heading">Por que somos diferentes?</h1>
+        <p class="content">Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de todo o mundo a
+            se concentrarem naquilo que é realmente importante para elas.</p>
+    </section>
 
 </body>
 
