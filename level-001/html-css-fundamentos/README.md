@@ -42,6 +42,12 @@ O terceiro item desenvolvido é a página de métricas da empresa, categorizada 
 
 ![Exemplo da Metricas](https://ci3.googleusercontent.com/meips/ADKq_NZk4sM3zzI-mYhYgKUsV_eIwby3PXvfIubFttOoQ3TX5Ow2TjS7j8yhBDRdsx4qfT06hwuoTNe9SiwvTevB21_yP4O9vP4LdB1a35QtC6G3J4f0KDpOdNEKnWvdX46HvZI6LhC8ZGW0-QaXJ8J36x8N-dOazcpS1TWPdirnAemHbxC7fbQoOcqUU2kHq9RAb6fiKqd5d4B9zyzJdhWHrH-tPjsPqsqE_inQxaQYH9E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/e3450239-e8e9-4d55-aee5-0f0fd275302b.png?width=1024&upscale=true&name=e3450239-e8e9-4d55-aee5-0f0fd275302b.png)
 
+### Quarta Tarefa: Seção de talentos
+
+O quarto item desenvolvido é a página de busca de talentos da empresa com a imagem do time.
+
+![Exemplo de Talentos](https://ci3.googleusercontent.com/meips/ADKq_Nblz-E81su_gZ93YsLc2g2L3FY10rxkO0gyKKSyRZo7oPXrWw1JubKaL6m2mdCLN-7ISQ9a8-8-9u2cAkXn9AaSFpjOPCVPWmRgJt5afaiqqIomgStcN1CjWQSJ1KA6yGjlP76ufnJK6afBvptFU6AZixcprivVMFzxDnlYHixKMMylg5471ZdKlRyixanOLsQ6CohR-htjKTTIT8E=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/Design%20sem%20nome%20(6)-1.png?width=1120&upscale=true&name=Design%20sem%20nome%20(6)-1.png)
+
 ## Instalação
 
 Para rodar o projeto localmente, siga os passos abaixo:
