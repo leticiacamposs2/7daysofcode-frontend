@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+:root {
+  --text-color: #667085;
+  --main-color: #8E2424;
+  --base-color: #FFFFFF;
+  --black-color: #101828;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 20px;
+  }
+
+  .menu-content ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu-content li {
+    margin-right: 10px;
+  }
+
+  .menu-content li a {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .navigation-action button {
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 112px;
+    height: 44px;
+    cursor: pointer;
+  }
+
+  button {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background: none;
+    font-size: 0.9rem;
+  }
+
+  button.botao-cadastro {
+    background-color: var(--main-color);
+    color: var(--base-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-content ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-content li {
+    margin: 10px 0;
+  }
+
+  .navigation-action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .button-base,
+  .logotype {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-action button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .menu-content li a {
+    padding: 8px;
+  }
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 407px;
+  padding: 20px;
+
+  .subheading {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 16px;
+    padding-top: 96px;
+    margin-bottom: 24px;
+  }
+
+  .heading {
+    font-size: 48px;
+    color: var(--black-color);
+    margin-bottom: 24px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    margin-bottom: 96px;
+    line-height: 30px;
+  }
+
+}
