@@ -60,6 +60,13 @@ O sexto item desenvolvido é a seção de depoimentos fornecidas pelos colaborad
 
 ![Exemplo de depoimentos](https://ci3.googleusercontent.com/meips/ADKq_NbCLYB11wov59T_qfUeeEA67pjM1YcD5eVoPMSW4YpztE4Y3Ak9LOWiUC91TjZgVXSjcN6iIWw5UW3TPNhRSMnuOlaHtn7rgwLAjLFYyKRiO3Aksx1ribNLTTdqglduGJlumpiG_JVLSo0r6nFOzdJoSKfGXzgqz7NxGsrJK9-MPgtUnN1zqfhmAqAC1ASBnSdrbn6_yLeMq0QzldtPpz22pyIn-0P9Roqj6ffwqCk=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/e9c8a87f-327c-478a-a74d-f889672d9318.png?width=1024&upscale=true&name=e9c8a87f-327c-478a-a74d-f889672d9318.png)
 
+### Sétima Tarefa: Seção de email
+
+O sétimo item desenvolvido é a última seção do projeto da página: o rodapé.
+Nessa seção vai ter um título, um pequeno texto, um formulário com um campo de entrada para o e-mail e um botão. Além disso, também há um texto de copyright logo abaixo.
+
+![Exemplo de email](https://ci3.googleusercontent.com/meips/ADKq_NaC_dblro8G2uJuzi32S49Qq7slCmtNJtJ65aw1T4RrTVpygMJyG-wYKhUwykbFt3hEriqoc9bTCDeYAsmWSIEoPIb42RGPDAqAZQVzou81DtXhMPGPjMsCpbT5aew5aQjAuJcglQkR_d8edIS2uny1Vhve3ICMLUE8JcjO5BgGqNLUrD2fPlXCZyIrgAuGF7Xw4x9bIHjcnpfDACQCS5mldIcgF_u_ZAi1B8ckr0jaMqWZH4C56ME4lzQ=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/aea36a16-c33e-4cca-a751-ac1083c0ada9%20(1).png?width=1024&upscale=true&name=aea36a16-c33e-4cca-a751-ac1083c0ada9%20(1).png)
+
 ## Instalação
 
 Para rodar o projeto localmente, siga os passos abaixo:

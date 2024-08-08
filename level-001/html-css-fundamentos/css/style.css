@@ -11,8 +11,11 @@
   --main-color: #8E2424;
   --base-color: #FFFFFF;
   --card-color: #EAECF0;
+  --email-color: #F9FAFB;
   --title-color: #101828;
-  --neutral-color: #FBF7F1;
+  --input-color: #D0D5DD;
+  --neutral-color: #F5F1EB;
+  --direitos-color: #98A2B3;
 }
 
 body {
@@ -60,23 +63,22 @@ nav {
     font-size: 16px;
     width: 112px;
     height: 44px;
-    cursor: pointer;
   }
+}
 
-  button {
-    padding: 0.8rem 1rem;
-    cursor: pointer;
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    background: none;
-    font-size: 0.9rem;
-  }
+button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  background: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
 
-  button.botao-cadastro {
-    background-color: var(--main-color);
-    color: var(--base-color);
-  }
+button.botao-cadastro {
+  background-color: var(--main-color);
+  color: var(--base-color);
 }
 
 @media (max-width: 768px) {
@@ -267,5 +269,52 @@ nav {
     height: 56px;
     margin-top: 32px;
     margin-bottom: 16px
+  }
+}
+
+#email {
+
+  .email-container {
+    padding-top: 70px;
+
+    .heading {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      font-size: 36px;
+    }
+  }
+
+  .email-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--email-color);
+    width: 100%;
+    padding: 0 20px;
+
+    input {
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      border-style: solid;
+      border-color: var(--input-color);
+    }
+
+    .content {
+      margin-bottom: 24px !important;
+    }
+
+    .email-form {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .email-direitos-reservados {
+      color: var(--direitos-color);
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
   }
 }
