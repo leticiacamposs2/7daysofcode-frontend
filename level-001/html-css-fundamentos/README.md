@@ -52,7 +52,13 @@ O quarto item desenvolvido é a página de busca de talentos da empresa com a im
 
 O quinto item desenvolvido é a lista de vagas disponiveis na empresa em formato de cards.
 
-![Exemplo de Vagas](./images/vagas-card.png)
+![Exemplo de Vagas](https://ci3.googleusercontent.com/meips/ADKq_NZZdL2tnhCr_BD7jHmb5xM0VXxlv4xmOdaYbEK7P5Trhc1qRysy1f5pfz6tC7LpA7TJOhBCTIebOK_6K-VxpaEG6FdjG0xl-OtZm7oIGH0spo5mWgkma7s3J8J4KuxK4LFims8D1WnjKysOc2vkRq23ZxxH4rrQKshQxzv47-FW9lXDMoCluIi0NegaNqaavaGyFTJ0L3shAw=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/Design%20sem%20nome%20(7).png?width=1120&upscale=true&name=Design%20sem%20nome%20(7).png)
+
+### Sexta Tarefa: Seção de depoimentos
+
+O sexto item desenvolvido é a seção de depoimentos fornecidas pelos colaboradores da empresa com opiniões relacionadas a cultura da empresa e como é o dia a dia e suporte fornecido.
+
+![Exemplo de depoimentos](https://ci3.googleusercontent.com/meips/ADKq_NbCLYB11wov59T_qfUeeEA67pjM1YcD5eVoPMSW4YpztE4Y3Ak9LOWiUC91TjZgVXSjcN6iIWw5UW3TPNhRSMnuOlaHtn7rgwLAjLFYyKRiO3Aksx1ribNLTTdqglduGJlumpiG_JVLSo0r6nFOzdJoSKfGXzgqz7NxGsrJK9-MPgtUnN1zqfhmAqAC1ASBnSdrbn6_yLeMq0QzldtPpz22pyIn-0P9Roqj6ffwqCk=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/e9c8a87f-327c-478a-a74d-f889672d9318.png?width=1024&upscale=true&name=e9c8a87f-327c-478a-a74d-f889672d9318.png)
 
 ## Instalação
 

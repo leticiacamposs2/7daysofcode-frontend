@@ -10,8 +10,9 @@
   --text-color: #667085;
   --main-color: #8E2424;
   --base-color: #FFFFFF;
-  --black-color: #101828;
   --card-color: #EAECF0;
+  --title-color: #101828;
+  --neutral-color: #FBF7F1;
 }
 
 body {
@@ -126,19 +127,34 @@ nav {
   padding: 20px;
 }
 
+.cabecalho-container .subheading {
+  padding-top: 96px;
+}
 
 .subheading {
   color: var(--main-color);
   font-weight: 600;
   font-size: 16px;
-  padding-top: 96px;
   margin-bottom: 24px;
 }
 
 .heading {
-  font-size: 48px;
-  color: var(--black-color);
+  color: var(--title-color);
+}
+
+.cabecalho-container .heading {
   margin-bottom: 24px;
+  font-size: 48px;
+}
+
+.depoimentos-container .heading {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 44px;
+  font-size: 36px;
 }
 
 .content {
@@ -172,7 +188,7 @@ nav {
   }
 
   .metricas-titulo {
-    color: var(--black-color);
+    color: var(--title-color);
     font-size: 18px;
   }
 
@@ -194,29 +210,29 @@ nav {
 }
 
 #vagas {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1280px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 
   .vagas-container {
     border: 1px solid var(--card-color);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
+    width: 80%;
   }
 
   .area-vaga {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 32px;
-    color: var(--black-color);
+    color: var(--title-color);
   }
 
   .titulo-vaga {
     font-size: 18px;
     font-weight: bold;
-    color: var(--black-color);
+    color: var(--title-color);
   }
 
   .informacoes {
@@ -226,5 +242,30 @@ nav {
 
   .faixa-salarial {
     padding: 10px;
+  }
+}
+
+#depoimentos {
+  background-color: var(--neutral-color);
+
+  .depoimentos-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+
+  .colaborador-nome {
+    font-weight: bold;
+    line-height: 24px;
+    color: var(--title-color);
+  }
+
+  #avatar-depoimentos {
+    width: 56px;
+    height: 56px;
+    margin-top: 32px;
+    margin-bottom: 16px
   }
 }
