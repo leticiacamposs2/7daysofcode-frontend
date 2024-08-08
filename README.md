@@ -10,8 +10,8 @@ O Tech Guide - Guia do Profissional em T é um caminho de aprendizado estruturad
 
 ### Level 001
 
-- [ ] HTML: Fundamentos
-- [ ] CSS: Fundamentos
+- [x] HTML: Fundamentos
+- [x] CSS: Fundamentos
 - [ ] JavaScript: Fundamentos
 - [ ] DOM: Fundamentos
 - [ ] Acessibilidade em Javascript
