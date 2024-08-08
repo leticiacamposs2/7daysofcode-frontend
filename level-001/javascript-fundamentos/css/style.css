@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --main-color: #8E2424;
+  --base-color: #FFFFFF;
+  --input-color: #D0D5DD;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: none;
+  background-color: var(--main-color);
+  color: var(--base-color);
+  cursor: pointer;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: var(--input-color);
+}
+
+.formulario-pessoas {
+  /* display: flex; */
+}
