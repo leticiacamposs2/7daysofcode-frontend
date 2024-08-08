@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Pessoas</title>
+</head>
+
+<body>
+    <h1>Cadastro de pessoas</h1>
+    <div class="formulario-pessoas">
+        <form class="form js-form">
+            <p>
+                <label for="name">
+                    Nome:
+                    <input id="name" class="form-field js-field" maxlength="120" name="name" required type="text">
+                </label>
+            </p>
+            <p>
+                <label for="birth-date">
+                    Data de Nascimento:
+                    <input id="birth-date" class="form-field js-field" name="birth-date" required type="date">
+                </label>
+            </p>
+            <p>
+                <button type="submit">Salvar</button>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
