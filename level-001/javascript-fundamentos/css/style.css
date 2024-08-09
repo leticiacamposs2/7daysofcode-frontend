@@ -2,13 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
 }
 
 :root {
-  --main-color: #8E2424;
-  --base-color: #FFFFFF;
-  --input-color: #D0D5DD;
+  --red-color: #E72E2E;
+  --green-color: #4CAF50;
+  --white-color: #FFFFFF;
+  --blue-color: #2086CA;
+  --gray-color: #E0E0E0;
+  --light-gray-color: #DDDDDD;
+  --golden-color: #6d681c;
 }
 
 body {
@@ -16,25 +21,129 @@ body {
   height: 100vh;
 }
 
-button {
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 0.9rem;
-  background: none;
-  background-color: var(--main-color);
-  color: var(--base-color);
-  cursor: pointer;
+.header-container {
+  overflow: hidden;
+  background-color: var(--blue-color);
+  padding: 60px 10px;
+
+  h1 {
+    color: var(--white-color);
+    text-align: center;
+    font-size: 32px;
+  }
 }
 
-input {
-  padding: 0.8rem 1rem;
-  border-radius: 6px;
-  border-style: solid;
-  border-color: var(--input-color);
+.formulario-aniversarios {
+
+  margin: 50px;
+
+  .campo-titulo {
+    padding: 0px 0px 5px;
+  }
+
+  .campo-obrigatorio {
+    font-size: 10px;
+  }
+
+  .campo-input {
+    padding: 0px 0px 5px;
+  }
+
+  .campo-input input {
+    background-color: var(--gray-color);
+    border: none;
+    padding: 8px 8px;
+    text-align: left;
+    vertical-align: top;
+    width: 70%;
+  }
+
+  .campo-input input::before {
+    box-sizing: inherit;
+  }
+
+  .campo-input input::after {
+    box-sizing: inherit;
+  }
+
+  .mensagem-erro {
+    padding: 0px 0px 5px;
+    color: var(--red-color);
+    font-size: 14px;
+  }
+
+  .envio-formulario {
+
+    .botao-cadastro button {
+      background-color: var(--green-color);
+      color: var(--white-color);
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-bottom: 16px;
+      border: none;
+      display: inline-block;
+      overflow: hidden;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      white-space: nowrap;
+      width: 15%;
+    }
+
+    .botao-cadastro button::before {
+      box-sizing: inherit;
+    }
+
+    .botao-cadastro button::after {
+      box-sizing: inherit;
+    }
+  }
 }
 
-.formulario-pessoas {
-  /* display: flex; */
+.tabela-aniversarios {
+  margin: 50px;
+
+  #tabela {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #tabela td,
+  #tabela th {
+    border: 1px solid var(--light-gray-color);
+    ;
+    padding: 8px;
+  }
+
+  #tabela tr:hover {
+    background-color: var(--light-gray-color);
+    ;
+  }
+
+  .tabela {
+    text-align: left;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .botao-deletar {
+    color: var(--red-color);
+  }
+
+  .botao-editar {
+    color: var(--golden-color);
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .header-container {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }

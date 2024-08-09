@@ -1,3 +1,8 @@
+<!-- Com essa estrutura base criada, 
+ você precisará vincular uma função ao evento de submissão do formulário. 
+ A função vinculada deverá pegar o valor informado nos campos 
+ nome e data de nascimento e imprimi-los no console. -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,30 +15,80 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD Pessoas</title>
+    <title>CRUD Aniversários</title>
 </head>
 
 <body>
-    <h1>Cadastro de pessoas</h1>
-    <div class="formulario-pessoas">
-        <form class="form js-form">
-            <p>
+    <section id="header-aniversario">
+        <div class="header-container">
+            <h1 class="header-titulo">Meus Aniversários</h1>
+        </div>
+    </section>
+    <section id="cadastro-aniversarios">
+        <div class="formulario-aniversarios">
+            <form class="form js-form">
                 <label for="name">
-                    Nome:
-                    <input id="name" class="form-field js-field" maxlength="120" name="name" required type="text">
+                    <p class="campo-titulo"><b>Nome da pessoa</b>
+                        <span class="campo-obrigatorio">(campo obrigatório)</span>
+                    </p>
+                    <p class="campo-input"><input id="name" class="form-field js-field" maxlength="120" name="name"
+                            required type="text" placeholder="Digite o nome da pessoa aqui, por exemplo: João ou Maria">
+                    </p>
+                    <p class="mensagem-erro">O nome precisa ter pelo menos três letras e no máximo cento e vinte, não é
+                        possível informar números</p>
                 </label>
-            </p>
-            <p>
+                <br />
                 <label for="birth-date">
-                    Data de Nascimento:
-                    <input id="birth-date" class="form-field js-field" name="birth-date" required type="date">
+                    <p class="campo-titulo"><b>Data de nascimento</b>
+                        <span class="campo-obrigatorio">(campo obrigatório)</span>
+                    </p>
+                    <p class="campo-input"><input id="birth-date" class="form-field js-field" name="birth-date" required
+                            type="text" placeholder="Digite o nome da pessoa aqui, por exemplo: 28/01/2002"></p>
+                    <p class="mensagem-erro">A data precisa estar no formato de DD/MM/AAAA</p>
                 </label>
-            </p>
-            <p>
-                <button type="submit">Salvar</button>
-            </p>
-        </form>
-    </div>
+                <br />
+                <div class="envio-formulario">
+                    <p class="botao-cadastro"><button type="submit">Salvar</button></p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="lista-aniversarios">
+        <div class="tabela-aniversarios">
+            <table id="tabela" class="tabela">
+                <tr class="colunas">
+                    <th class="titulo">Nome</th>
+                    <th class="titulo">Data de Nascimento</th>
+                    <th class="titulo">Ações</th>
+                </tr>
+                <tr class="colunas">
+                    <td class="descricao-nome">Maria Alice</td>
+                    <td class="data-nascimento">25/05/1992</td>
+                    <td class="botoes-acao">
+                        <button class="botao-editar">Editar</button>
+                        <button class="botao-deletar">Deletar</button>
+                    </td>
+                </tr>
+                <tr class="colunas">
+                    <td class="descricao-nome">Rafa Dias</td>
+                    <td class="data-nascimento">07/10/1940</td>
+                    <td class="botoes-acao">
+                        <button class="botao-editar">Editar</button>
+                        <button class="botao-deletar">Deletar</button>
+                    </td>
+                </tr>
+                <tr class="colunas">
+                    <td class="descricao-nome">Larissa Manoela</td>
+                    <td class="data-nascimento">04/06/1996</td>
+                    <td class="botoes-acao">
+                        <button class="botao-editar">Editar</button>
+                        <button class="botao-deletar">Deletar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <br /><br />
 </body>
 
 </html>
