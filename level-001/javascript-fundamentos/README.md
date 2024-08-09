@@ -2,6 +2,8 @@
 
 Este projeto consiste em uma aplicação web que permite a criação de um formulário dinâmico com funcionalidade de validação e um CRUD completo para gerenciar as submissões do formulário. A aplicação será disponibilizada publicamente na internet.
 
+![CRUD JS](https://ci3.googleusercontent.com/meips/ADKq_Na5LH_IVVF-UV9UI7oWenrYm084AUM_wva7YcjHfhoEFKX-Ju-Natb9lA3YnWuJxhLBNBQIJv6x3_ZLjWNJZRooEZuCKD33vITXT-vukA0xhTaef3gjSxV2yrnpgYKWFY_YMsRB4hqcY2d4ah4eoUX6NLkYbPbP0eTgTcvfaN0leJrA5KKrMiILMljnKYoKxvsMH3dXWMc0e9yMReh74yoFt_pZwO4T96pmFHcNPcU=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/8d7aa1bf-2826-46d3-9162-6542745bdf97.png?width=1024&upscale=true&name=8d7aa1bf-2826-46d3-9162-6542745bdf97.png)
+
 ## Funcionalidades
 
 - **Formulário Dinâmico:**
