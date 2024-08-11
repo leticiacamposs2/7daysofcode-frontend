@@ -25,6 +25,14 @@ A estrutura inicial da aplicação inclui:
   - Campo para a data de nascimento
   - Botão de submissão vinculado a uma função JavaScript que imprime os valores dos campos no console.
 
+## Validações do formulário:
+
+- Um nome precisa ter no mínimo três letras.
+- Um nome pode ter no máximo 120 letras.
+- Um nome pode apenas conter letras, e não números.
+- A data de nascimento precisa estar no formato DD/MM/AAAA, por exemplo: 31/01/2021.
+- O mês informado deve estar entre 01 e 12.
+
 ## Como Usar
 
 1. Clone este repositório.
