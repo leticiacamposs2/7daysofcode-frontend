@@ -21,7 +21,9 @@ function enviarFormulario() {
     const camposFormulario = {
         inputs: {
             name: inputName,
-            birthDate: inputBirthDate
+            nameValue: inputName.value.trim(),
+            birthDate: inputBirthDate,
+            birthDateValue: inputBirthDate.value.trim()
         },
         errorMessage: {
             name: messageErrorName,
@@ -29,25 +31,33 @@ function enviarFormulario() {
         }
     };
 
-    validarCamposFormulario(camposFormulario);
+    const isValidCampos = validarCamposFormulario(camposFormulario);
+
+    if (isValidCampos) {
+        exibeDadosConsole(camposFormulario);
+    }
 }
 
 function validarCamposFormulario(camposFormulario) {
 
     const errorMessageName = camposFormulario.errorMessage.name;
     const errorMessageBirthDate = camposFormulario.errorMessage.birthDate;
-    const nameValue = camposFormulario.inputs.name.value.trim();
-    const birthDateValue = camposFormulario.inputs.birthDate.value.trim();
+    const nameValue = camposFormulario.inputs.nameValue;
+    const birthDateValue = camposFormulario.inputs.birthDateValue;
 
-    validaName(nameValue, errorMessageName);
-    validaBirthDate(birthDateValue, errorMessageBirthDate);
-    exibeDadosConsole(nameValue, birthDateValue);
+    const isValidName = validaName(nameValue, errorMessageName);
+    const isValidBirthDate = validaBirthDate(birthDateValue, errorMessageBirthDate);
+
+    return isValidName && isValidBirthDate;
+
 }
 
 function validaName(nameValue, errorMessageName) {
 
     errorMessageName.innerHTML = (nameValue.length < 3 || nameValue.length > 120 || !/^[A-Za-z\s]+$/.test(nameValue)) ?
         "O nome precisa ter pelo menos três letras e no máximo cento e vinte, e não pode conter números." : "";
+
+    return isEmpty(errorMessageName.innerHTML);
 
 }
 
@@ -58,12 +68,17 @@ function validaBirthDate(birthDateValue, errorMessageBirthDate) {
     errorMessageBirthDate.innerHTML = (!datePattern.test(birthDateValue)) ?
         "A data precisa estar no formato de DD/MM/AAAA e o mês deve estar entre 01 e 12." : "";
 
-}
-
-function exibeDadosConsole(nameValue, birthDateValue) {
-
-    console.log(`Nome: ${nameValue}`);
-    console.log(`Data de Nascimento: ${birthDateValue}`);
+    return isEmpty(errorMessageBirthDate.innerHTML);
 
 }
 
+function exibeDadosConsole(camposFormulario) {
+
+    console.log(`Nome: ${camposFormulario.inputs.nameValue}`);
+    console.log(`Data de Nascimento: ${camposFormulario.inputs.birthDateValue}`);
+
+}
+
+function isEmpty(value) {
+    return value === "" && value !== undefined && value !== null;
+}
