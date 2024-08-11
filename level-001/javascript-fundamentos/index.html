@@ -26,11 +26,11 @@
                     <p class="campo-titulo"><b>Nome da pessoa</b>
                         <span class="campo-obrigatorio">(campo obrigatório)</span>
                     </p>
-                    <p class="campo-input"><input id="name" class="form-field js-field" maxlength="120" name="name"
-                            required type="text" placeholder="Digite o nome da pessoa aqui, por exemplo: João ou Maria">
+                    <p class="campo-input"><input id="name" class="form-field js-field" minlength="3" maxlength="120"
+                            name="name" required type="text"
+                            placeholder="Digite o nome da pessoa aqui, por exemplo: João ou Maria">
                     </p>
-                    <p class="mensagem-erro">O nome precisa ter pelo menos três letras e no máximo cento e vinte, não é
-                        possível informar números</p>
+                    <p class="mensagem-erro" id="error-name"></p>
                 </label>
                 <br />
                 <label for="birth-date">
@@ -39,11 +39,11 @@
                     </p>
                     <p class="campo-input"><input id="birth-date" class="form-field js-field" name="birth-date" required
                             type="text" placeholder="Digite o nome da pessoa aqui, por exemplo: 28/01/2002"></p>
-                    <p class="mensagem-erro">A data precisa estar no formato de DD/MM/AAAA</p>
+                    <p class="mensagem-erro" id="error-birth-date"></p>
                 </label>
                 <br />
                 <div class="envio-formulario">
-                    <p class="botao-cadastro"><button type="submit">Salvar</button></p>
+                    <p class="botao-cadastro"><button onclick="enviarFormulario()" type="submit">Salvar</button></p>
                 </div>
             </form>
         </div>
