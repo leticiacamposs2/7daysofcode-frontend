@@ -7,12 +7,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         event.preventDefault();
 
-        const name = document.querySelector("#name").value;
-        const birthDate = document.querySelector("#birth-date").value;
-
-        console.log(`Nome: ${name}`);
-        console.log(`Data de Nascimento: ${birthDate}`);
     });
+
 });
 
 function enviarFormulario() {
@@ -45,9 +41,7 @@ function validarCamposFormulario(camposFormulario) {
 
     validaName(nameValue, errorMessageName);
     validaBirthDate(birthDateValue, errorMessageBirthDate);
-
-    console.log(`Nome: ${nameValue}`);
-    console.log(`Data de Nascimento: ${birthDateValue}`);
+    exibeDadosConsole(nameValue, birthDateValue);
 }
 
 function validaName(nameValue, errorMessageName) {
@@ -65,3 +59,11 @@ function validaBirthDate(birthDateValue, errorMessageBirthDate) {
         "A data precisa estar no formato de DD/MM/AAAA e o mês deve estar entre 01 e 12." : "";
 
 }
+
+function exibeDadosConsole(nameValue, birthDateValue) {
+
+    console.log(`Nome: ${nameValue}`);
+    console.log(`Data de Nascimento: ${birthDateValue}`);
+
+}
+
