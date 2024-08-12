@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
 
+    carregarTabela();
+
     const formulario = document.querySelector(".js-form");
 
     formulario.addEventListener("submit", function (event) {
@@ -34,8 +36,10 @@ function enviarFormulario() {
     const isValidCampos = validarCamposFormulario(camposFormulario);
 
     if (isValidCampos) {
-        exibeDadosConsole(camposFormulario);
+        salvarDados(camposFormulario.inputs);
+        carregarTabela();
     }
+
 }
 
 function validarCamposFormulario(camposFormulario) {
@@ -72,13 +76,76 @@ function validaBirthDate(birthDateValue, errorMessageBirthDate) {
 
 }
 
-function exibeDadosConsole(camposFormulario) {
+function salvarDados(camposFormulario) {
 
-    console.log(`Nome: ${camposFormulario.inputs.nameValue}`);
-    console.log(`Data de Nascimento: ${camposFormulario.inputs.birthDateValue}`);
+    const cadastro = {
+        name: camposFormulario.nameValue,
+        birthDate: camposFormulario.birthDateValue
+    };
+
+    let dadosAniversarios = recuperaDados();
+    dadosAniversarios.push(cadastro);
+    localStorage.setItem("aniversarios", JSON.stringify(dadosAniversarios));
 
 }
 
-function isEmpty(value) {
-    return value === "" && value !== undefined && value !== null;
+function recuperaDados() {
+    return JSON.parse(localStorage.getItem("aniversarios")) || [];
+}
+
+function carregarTabela() {
+
+    const tabela = document.getElementById("tabela");
+    const dadosAniversarios = recuperaDados();
+
+    while (tabela.rows.length > 1) {
+        tabela.deleteRow(1);
+    }
+
+    dadosAniversarios.forEach((cadastro, index) => {
+
+        const novaLinha = tabela.insertRow();
+        const colunaNome = novaLinha.insertCell(0);
+        const colunaDataNascimento = novaLinha.insertCell(1);
+        const colunaAcoes = novaLinha.insertCell(2);
+
+        colunaNome.innerHTML = cadastro.name;
+        colunaDataNascimento.innerHTML = cadastro.birthDate;
+
+        const btnEditar = document.createElement("button");
+        btnEditar.innerHTML = "Editar";
+        btnEditar.className = "botao-editar";
+        btnEditar.onclick = function () { editarCadastro(index); };
+
+        const btnDeletar = document.createElement("button");
+        btnDeletar.innerHTML = "Deletar";
+        btnDeletar.className = "botao-deletar";
+        btnDeletar.onclick = function () { deletarCadastro(index); };
+
+        colunaAcoes.appendChild(btnEditar);
+        colunaAcoes.appendChild(btnDeletar);
+    });
+}
+
+function editarCadastro(index) {
+
+    const dadosAniversarios = recuperaDados();
+    const cadastro = dadosAniversarios[index];
+
+    document.getElementById("name").value = cadastro.name;
+    document.getElementById("birth-date").value = cadastro.birthDate;
+
+    deletarCadastro(index);
+
+}
+
+function deletarCadastro(index) {
+
+    let dadosAniversarios = recuperaDados();
+
+    dadosAniversarios.splice(index, 1);
+    localStorage.setItem("aniversarios", JSON.stringify(dadosAniversarios));
+
+    carregarTabela();
+
 }
