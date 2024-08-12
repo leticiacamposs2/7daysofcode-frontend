@@ -33,6 +33,12 @@ A estrutura inicial da aplicação inclui:
 - A data de nascimento precisa estar no formato DD/MM/AAAA, por exemplo: 31/01/2021.
 - O mês informado deve estar entre 01 e 12.
 
+## Gravação dos dados na tabela
+
+- Recuperar os dados do localStorage.
+- Criar as linhas da tabela dinamicamente.
+- Adicionar as linhas criadas à tabela existente no HTML.
+
 ## Como Usar
 
 1. Clone este repositório.
