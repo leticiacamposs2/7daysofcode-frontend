@@ -1,13 +1,13 @@
 # Projeto: Projeto: Página de Filmes
 
-## Visualização do Projeto Final
+### Visualização do Projeto Final
 
 ![Pagina de Filmes](https://ci3.googleusercontent.com/meips/ADKq_NYd-oJ3RVkcpxBbjWz27Mxo4eKhRlkmCbTh4tYxMWFsaR69k41Lukp3uzxOj7ArjNTY9NV17icwIkEOte4qtkuFta8kRpJk0if2La5h_bllijeNbVNRyncFPWLP0C8GPb9TT42ydWIiyuOaKfHiGbGpgToNyXz2n3oKjInur0_hunxndjgawK8hto9cODOq5sp8n0j0f2w7JYU7AKS_PnZSWq_JxRLkki353lJXUH8=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/20724e3b-6481-4352-8fd2-026d98385632.png?width=1120&upscale=true&name=20724e3b-6481-4352-8fd2-026d98385632.png)
 
 Este projeto tem como objetivo criar uma página de filmes que consome a API [The Movie DataBase API](
 https://developer.themoviedb.org/reference/intro/getting-started) para listar os filmes populares do momento. Além disso, inclui funcionalidades de favoritar/desfavoritar filmes, pesquisa por título e exibição de apenas filmes favoritos.
 
-## Funcionalidades Implementadas
+### Funcionalidades Implementadas
 
 1. Manipulação do DOM e Criação Dinâmica de Elementos
 - Criação dinâmica de elementos de filmes utilizando JavaScript.
@@ -28,7 +28,7 @@ https://developer.themoviedb.org/reference/intro/getting-started) para listar os
 5. Exibição de Filmes Favoritos
 - Implementação de um checkbox que permite filtrar e mostrar apenas os filmes favoritos.
 
-## Passo a Passo de Desenvolvimento
+### Passo a Passo de Desenvolvimento
 
 ### Primeira Tarefa: Manipulação do DOM e criando os elementos de forma dinâmica
 
@@ -56,7 +56,7 @@ Adição de um checkbox que, ao ser marcado, filtra a exibição para mostrar ap
 
 [Exibe filmes favoritos](https://ci3.googleusercontent.com/meips/ADKq_NbQ6FT5f7QUw8i39sYHAuEC4hfy6ad2eABVoh5c_iyVxjkt_wIOQgFhYr8GgUFPbAgzw3Wh_uDGLIALwC_L0zTiKnP8ZSsZoRrtT2PG3_ZJCfRxY5GAT-g8kLCG1Q6L27KlsPgHna5tqR6diS27Mry4gb_CKQUEJamObEvZF1xoEoFQ1amGf4Zqz1y7uGxTFkyBkZmFMUEgZd1fIt9OQSoRNUbld_FVWm5wl2s_zZzQWMj4FfN6Jhta6ik=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/3403540c-9ee5-4083-a4ff-1852c752105e%20(3).png?width=1120&upscale=true&name=3403540c-9ee5-4083-a4ff-1852c752105e%20(3).png)
 
-## Tecnologias Utilizadas
+### Tecnologias Utilizadas
 
 - HTML
 - CSS
@@ -64,7 +64,7 @@ Adição de um checkbox que, ao ser marcado, filtra a exibição para mostrar ap
 - Fetch API
 - Local Storage
 
-## Instruções para Executar o Projeto
+### Instruções para Executar o Projeto
 
 1. Clone este repositório.
 
@@ -72,6 +72,6 @@ Adição de um checkbox que, ao ser marcado, filtra a exibição para mostrar ap
 
 3. Navegue pela aplicação, utilize a barra de pesquisa para encontrar filmes específicos e marque/desmarque filmes como favoritos.
 
-## Contribuições
+### Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
