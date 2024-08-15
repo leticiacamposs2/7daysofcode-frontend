@@ -39,7 +39,6 @@ function enviarFormulario() {
         salvarDados(camposFormulario.inputs);
         carregarTabela();
         limparFormulario();
-
         mostraDialogo("Cadastro realizado com sucesso!", "success", 3000);
     }
 
