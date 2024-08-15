@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     const formulario = document.querySelector(".js-form");
 
-    formulario.addEventListener("submit", function (event) {
+    formulario.addEventListener("click", function (event) {
 
         event.preventDefault();
 
@@ -38,9 +38,12 @@ function enviarFormulario() {
     if (isValidCampos) {
         salvarDados(camposFormulario.inputs);
         carregarTabela();
+        limparFormulario();
     }
 
 }
+
+function limparFormulario() { return document.getElementById("form").reset(); }
 
 function validarCamposFormulario(camposFormulario) {
 
