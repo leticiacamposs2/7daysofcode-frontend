@@ -21,7 +21,7 @@
     </section>
     <section id="cadastro-aniversarios">
         <div class="formulario-aniversarios">
-            <form class="form js-form">
+            <form id="form" class="form js-form">
                 <label for="name">
                     <p class="campo-titulo"><b>Nome da pessoa</b>
                         <span class="campo-obrigatorio">(campo obrigatório)</span>
@@ -43,7 +43,7 @@
                 </label>
                 <br />
                 <div class="envio-formulario">
-                    <p class="botao-cadastro"><button onclick="enviarFormulario()" type="submit">Salvar</button></p>
+                    <p class="botao-cadastro"><button id="submit" onclick="enviarFormulario()">Salvar</button></p>
                 </div>
             </form>
         </div>
