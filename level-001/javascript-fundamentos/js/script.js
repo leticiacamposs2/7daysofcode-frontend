@@ -39,6 +39,8 @@ function enviarFormulario() {
         salvarDados(camposFormulario.inputs);
         carregarTabela();
         limparFormulario();
+
+        mostraDialogo("Cadastro realizado com sucesso!", "success", 3000);
     }
 
 }
@@ -150,5 +152,94 @@ function deletarCadastro(index) {
     localStorage.setItem("aniversarios", JSON.stringify(dadosAniversarios));
 
     carregarTabela();
+
+}
+
+function mostraDialogo(mensagem, tipo = "info", tempo = 3000) {
+
+    if (document.getElementById("message")) {
+        return false;
+    }
+
+    const cssMessage = "display: block; position: fixed; top: 0; left: 20%; right: 20%; width: 60%; padding-top: 10px; z-index: 9999";
+    const cssInner = "margin: 0 auto; box-shadow: 1px 1px 5px black; padding: 15px; border-radius: 5px; color: white;";
+
+    let tipoCor = "";
+    if (tipo === "success") {
+        tipoCor = "background-color: green;";
+    } else if (tipo === "info") {
+        tipoCor = "background-color: blue;";
+    } else if (tipo === "warning") {
+        tipoCor = "background-color: orange;";
+    } else if (tipo === "danger") {
+        tipoCor = "background-color: red;";
+    }
+
+    let dialogo = "";
+    dialogo += '<div id="message" style="' + cssMessage + '">';
+    dialogo += '    <div class="alert alert-' + tipo + ' alert-dismissable" style="' + cssInner + tipoCor + '">';
+    dialogo += '    <span class="close" onclick="this.parentElement.parentElement.remove()">×</span>';
+    dialogo += mensagem;
+    dialogo += '    </div>';
+    dialogo += '</div>';
+
+    let body = document.getElementsByTagName("body")[0];
+    let tempDiv = document.createElement("div");
+    let messageElement = document.getElementById("message");
+
+    tempDiv.innerHTML = dialogo;
+    body.appendChild(tempDiv.firstChild);
+
+    messageElement.style.display = "none";
+    fadeIn(messageElement, 200);
+
+    setTimeout(function () {
+        fadeOut(messageElement, 300, function () {
+            messageElement.remove();
+        });
+    }, tempo);
+
+}
+
+function fadeIn(element, duration) {
+
+    let opacity = 0;
+    let last = +new Date();
+
+    element.style.display = "";
+    element.style.opacity = opacity;
+
+    let tick = function () {
+        opacity += (new Date() - last) / duration;
+        element.style.opacity = opacity;
+        last = +new Date();
+
+        if (opacity < 1) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+        }
+    };
+
+    tick();
+
+}
+
+function fadeOut(element, duration, callback) {
+
+    let opacity = 1;
+    let last = +new Date();
+
+    let tick = function () {
+        opacity -= (new Date() - last) / duration;
+        element.style.opacity = opacity;
+        last = +new Date();
+
+        if (opacity > 0) {
+            (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+        } else {
+            if (callback) callback();
+        }
+    };
+
+    tick();
 
 }
