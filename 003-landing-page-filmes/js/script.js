@@ -1,5 +1,10 @@
 let movies = [];
 
+
+const pesquisa = document.getElementById('movie-name')
+console.log(pesquisa.value);
+
+
 function listagemDeFilmes(filmes) {
 
     const moviesDiv = document.querySelector('.movies');
