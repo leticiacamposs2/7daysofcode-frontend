@@ -1,35 +1,9 @@
-
-const movies = [
-    {
-        image: 'https://img.elo7.com.br/product/original/3FBA809/big-poster-filme-batman-2022-90x60-cm-lo002-poster-batman.jpg',
-        title: 'Batman',
-        rating: 9.2,
-        year: 2022,
-        description: "Descrição do filme…",
-        isFavorited: true,
-    },
-    {
-        image: 'https://upload.wikimedia.org/wikipedia/pt/thumb/9/9b/Avengers_Endgame.jpg/250px-Avengers_Endgame.jpg',
-        title: 'Avengers',
-        rating: 9.2,
-        year: 2019,
-        description: "Descrição do filme…",
-        isFavorited: false
-    },
-    {
-        image: 'https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg',
-        title: 'Doctor Strange',
-        rating: 9.2,
-        year: 2022,
-        description: "Descrição do filme…",
-        isFavorited: false
-    },
-]
-
+let movies = [];
 
 function listagemDeFilmes(filmes) {
 
     const moviesDiv = document.querySelector('.movies');
+    moviesDiv.innerHTML = '';
 
     filmes.forEach(filme => {
 
@@ -46,8 +20,8 @@ function listagemDeFilmes(filmes) {
         movieInformationsElement.appendChild(movieImageElement);
 
         const imageElement = document.createElement('img');
-        imageElement.src = filme.image;
-        imageElement.alt = filme.title;
+        imageElement.src = `https://image.tmdb.org/t/p/w200${filme.poster_path}`;;
+        imageElement.alt = filme.original_title;
         movieImageElement.appendChild(imageElement);
 
         const movieTextElement = document.createElement('div');
@@ -55,7 +29,7 @@ function listagemDeFilmes(filmes) {
         movieInformationsElement.appendChild(movieTextElement);
 
         const h4Element = document.createElement('h4');
-        h4Element.textContent = `${filme.title} (${filme.year})`;
+        h4Element.textContent = `${filme.original_title} (${filme.vote_count})`;
         movieTextElement.appendChild(h4Element);
 
         const ratingFavoritesElement = document.createElement('div');
@@ -72,7 +46,7 @@ function listagemDeFilmes(filmes) {
         ratingElement.appendChild(imageRatingElement);
 
         const spanElement = document.createElement('span');
-        spanElement.textContent = filme.rating;
+        spanElement.textContent = filme.vote_average;
         ratingElement.appendChild(spanElement);
 
         const favoriteElement = document.createElement('div');
@@ -93,9 +67,20 @@ function listagemDeFilmes(filmes) {
         movieElement.appendChild(movieDescriptionElement);
 
         const spanDescriptionElement = document.createElement('span');
-        spanDescriptionElement.textContent = filme.description;
+        spanDescriptionElement.textContent = filme.overview;
         movieDescriptionElement.appendChild(spanDescriptionElement);
+
     });
 }
 
-listagemDeFilmes(movies);
+async function getPopularFilmes() {
+    try {
+        const response = await fetch(`${BASE_URL}/movie/popular?api_key=${CHAVE_API}&language=pt-BR&page=1`);
+        const data = await response.json();
+        listagemDeFilmes(data.results);
+    } catch (error) {
+        console.error('Erro ao buscar filmes populares:', error);
+    }
+}
+
+getPopularFilmes()
