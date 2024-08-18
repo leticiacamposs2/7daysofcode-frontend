@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação de jogo de palavras semelhante ao popular jogo **Wordle**. O objetivo do jogo é adivinhar uma palavra secreta em até 6 tentativas. A cada palpite, o jogador recebe um feedback visual que indica se as letras estão na posição correta, incorreta, ou não fazem parte da palavra.
 
+![Wordle Clone Game](https://ci3.googleusercontent.com/meips/ADKq_NZBqRhW2zL4j0qIcDwqFi5UEmdxwlf0YLf8-73LIhDIUUxw7LuWprhYqqAmmbOZ0ytkBvOKN5tCwQnki-f-5h3W1j8QVcE4oPeDC4Z_CWCPnIaTBxaTEIWiQIXFcyyT7LQjbt_Z3lkpKpIvG1mhjaQGDTMFW0PKBY0pSIAbw_QFeF8dZ8EEKtKie55bxU2r3nkN5qvDeJs6D3BV1r1cgJvByP1sskj5iJEfHhZYAp0=s0-d-e1-ft#https://empresas.alura.com.br/hs-fs/hubfs/cb01dc1a-9abc-4be3-bc29-ce5232d862d8.png?width=1120&upscale=true&name=cb01dc1a-9abc-4be3-bc29-ce5232d862d8.png)
+
 
 ### Funcionalidades
 
