@@ -1,9 +1,13 @@
+
+addEventListener('input', (event) => {
+
+    if (event?.target?.name === 'onlyFavorites') listarFilmesFavoritos();
+
+    if (event?.target?.name === 'movie-name') pesquisarFilmes();
+
+});
+
 let movies = [];
-
-
-const pesquisa = document.getElementById('movie-name')
-console.log(pesquisa.value);
-
 
 function listagemDeFilmes(filmes) {
 
@@ -25,7 +29,7 @@ function listagemDeFilmes(filmes) {
         movieInformationsElement.appendChild(movieImageElement);
 
         const imageElement = document.createElement('img');
-        imageElement.src = `https://image.tmdb.org/t/p/w200${filme.poster_path}`;;
+        imageElement.src = `${BASE_URL_IMAGE}${filme.poster_path}`;
         imageElement.alt = filme.original_title;
         movieImageElement.appendChild(imageElement);
 
@@ -46,8 +50,8 @@ function listagemDeFilmes(filmes) {
         ratingFavoritesElement.appendChild(ratingElement);
 
         const imageRatingElement = document.createElement('img');
-        imageRatingElement.src = "images/star.png";
-        imageRatingElement.alt = "Star Icon";
+        imageRatingElement.src = `${PATH_IMAGE_STAR}`;
+        imageRatingElement.alt = 'Star Icon';
         ratingElement.appendChild(imageRatingElement);
 
         const spanElement = document.createElement('span');
@@ -59,12 +63,12 @@ function listagemDeFilmes(filmes) {
         ratingFavoritesElement.appendChild(favoriteElement);
 
         const imageFavoriteElement = document.createElement('img');
-        imageFavoriteElement.src = "images/heart.svg";
-        imageFavoriteElement.alt = "Heart Icon";
+        imageFavoriteElement.src = `${PATH_IMAGE_HEART}`;
+        imageFavoriteElement.alt = 'Heart Icon';
         favoriteElement.appendChild(imageFavoriteElement);
 
         const spanFavoriteElement = document.createElement('span');
-        spanFavoriteElement.textContent = filme.isFavorited ? "Favoritado" : "Favoritar";
+        spanFavoriteElement.textContent = filme.isFavorited ? 'Favoritado' : 'Favoritar';
         favoriteElement.appendChild(spanFavoriteElement);
 
         const movieDescriptionElement = document.createElement('div');
@@ -86,6 +90,52 @@ async function getPopularFilmes() {
     } catch (error) {
         console.error('Erro ao buscar filmes populares:', error);
     }
+}
+
+async function searchMovies(query) {
+
+    const url = `${BASE_URL}/search/movie?api_key=${CHAVE_API}&query=${encodeURIComponent(query)}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Erro na requisição: ' + response.statusText);
+        }
+
+        const data = await response.json();
+        return data.results;
+
+    } catch (error) {
+        console.error('Foram encontrados erros durante a pesquisa do filme: ', error);
+    }
+}
+
+
+function pesquisarFilmes() {
+
+    const pesquisa = document.getElementById('movie-name');
+    const movieDiv = document.querySelector('.movie');
+
+    if (!pesquisa.value && movieDiv == null) return getPopularFilmes();
+
+    searchMovies(pesquisa.value).then(movies => listagemDeFilmes(movies));
+
+}
+
+function listarFilmesFavoritos() {
+
+    const checkbox = document.getElementById('onlyFavorites');
+
+    if (checkbox.checked) {
+
+        console.log('selecionado');
+
+    } else {
+
+        console.log('não selecionado');
+    }
+
+
 }
 
 getPopularFilmes()
