@@ -1,4 +1,3 @@
-
 addEventListener('input', (event) => {
     if (event?.target?.name === 'onlyFavorites') listFavoriteMovies();
     if (event?.target?.name === 'movie-name') searchMovies();
@@ -118,31 +117,6 @@ function movieListing(filmes) {
     });
 }
 
-async function getPopularMovies() {
-    try {
-        const response = await fetch(`${BASE_URL}/movie/popular?api_key=${CHAVE_API}&language=pt-BR&page=1`);
-        const data = await response.json();
-        movieListing(data.results);
-    } catch (error) {
-        console.error('Erro ao buscar filmes populares:', error);
-    }
-}
-
-async function searchMovies(query) {
-    const url = `${BASE_URL}/search/movie?api_key=${CHAVE_API}&query=${encodeURIComponent(query)}`;
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Erro na requisição: ' + response.statusText);
-        }
-        const data = await response.json();
-        return data.results;
-    } catch (error) {
-        console.error('Foram encontrados erros durante a pesquisa do filme: ', error);
-    }
-}
-
-
 function searchMovies() {
     const pesquisa = document.getElementById('movie-name');
     const movieDiv = document.querySelector('.movie');
@@ -156,23 +130,9 @@ function listFavoriteMovies() {
     checkbox.checked ? movieListing(getLocalStorage()) : getPopularMovies();
 }
 
-function saveToLocalStorage(movie) {
-    const filmes = getLocalStorage();
-    filmes.push(movie);
-    localStorage.setItem("filmes-favoritos", JSON.stringify(filmes));
-}
-
-function removeFromLocalStorage(movieId) {
-    const filmes = getLocalStorage();
-    const updatedFilmes = filmes.filter(filme => filme.id !== movieId);
-    localStorage.setItem("filmes-favoritos", JSON.stringify(updatedFilmes));
-}
-
 function checkIfFavorited(movieId) {
     const filmes = getLocalStorage();
     return filmes.some(filme => filme.id === movieId);
 }
-
-function getLocalStorage() { return JSON.parse(localStorage.getItem("filmes-favoritos")) || []; }
 
 getPopularMovies()
