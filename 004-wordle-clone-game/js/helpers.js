@@ -35,7 +35,7 @@ function criarTeclado(teclas, teclado) {
                 if (key == 'ERASE') {
                     const img = document.createElement('img');
                     img.src = './images/erase.svg';
-                    img.alt = 'Clica para apagar';
+                    img.alt = 'botão com simbolo de deletar padrão dos teclados virtuais';
                     button.appendChild(img);
                 } else {
                     button.textContent = key;
@@ -51,3 +51,11 @@ function criarTeclado(teclas, teclado) {
         teclado.appendChild(row);
     });
 }
+
+const embaralharArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
