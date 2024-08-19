@@ -35,7 +35,7 @@ function criarTeclado(teclas, teclado) {
                 if (key == 'ERASE') {
                     const img = document.createElement('img');
                     img.src = './images/erase.svg';
-                    img.alt = 'Clica para apagar';
+                    img.alt = 'botão com simbolo de deletar padrão dos teclados virtuais';
                     button.appendChild(img);
                 } else {
                     button.textContent = key;
