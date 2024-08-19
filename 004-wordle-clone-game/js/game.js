@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     exibirTabuleiro();
     exibirTeclado();
+    iniciarJogo();
 
 });
 
@@ -24,3 +25,27 @@ function exibirTeclado() {
     return criarTeclado(teclas, tecladoElement);
 }
 
+async function iniciarJogo() {
+
+    const palavras = await obterPalavras();
+
+}
+
+async function obterPalavras() {
+
+    const listaFrases = await carregarFrases();
+
+    if (listaFrases.length === 0) {
+        console.error('A lista de frases está vazia.');
+        return;
+    }
+
+    const frasesEmbaralhadas = embaralharArray(listaFrases);
+    const frasesSelecionadas = frasesEmbaralhadas.slice(0, 6);
+
+    console.log("Lista de frases:", listaFrases);
+    console.log("Frases escolhidas:", JSON.stringify(frasesSelecionadas));
+
+    return frasesSelecionadas;
+
+}
