@@ -1,9 +1,10 @@
 * {
+    border: 0;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--theme-color);
 }
 
 :root {
@@ -20,19 +21,53 @@
 }
 
 body {
-    width: 100%;
-    height: 100vh;
+    background-color: var(--theme-color);
 }
 
-.header-container {
-    height: 80px;
+.header {
     border-bottom: 1px solid var(--neutral-color);
+    height: 80px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-    .header-logo {
-        padding-bottom: 0px;
-        margin-left: 51px;
-        margin-right: 51px;
-        margin-top: 25px;
-        margin-bottom: 0px;
-    }
+header {
+    align-items: center;
+    display: flex;
+    height: inherit;
+    margin: 0 auto;
+    max-width: 992px;
+}
+
+main {
+    margin: 85px auto 0;
+    max-width: 992px;
+}
+
+.board-game {
+    margin: 200px auto 0;
+    width: 330px;
+}
+
+.board-game .row {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 62px 62px 62px 62px 62px;
+    height: 62px;
+    margin-bottom: 5px;
+}
+
+.board-game .letter {
+    border: 1px solid var(--neutral-color);
+}
+
+.board-game .letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-transform: capitalize;
+    font-weight: bold;
 }
