@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    criarTabuleiro();
+
+});
+
+function criarTabuleiro() {
+
     const boardGame = document.querySelector('.board-game');
 
     for (let i = 1; i <= 6; i++) {
@@ -17,4 +23,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
         boardGame.appendChild(row);
     }
-});
+}
