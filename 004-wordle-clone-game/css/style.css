@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--project-theme-color);
+}
+
+:root {
+    --project-theme-color: #14161C;
+    --clipboard-theme-color: #818384;
+    --words-theme-color: #FFFFFF;
+    --word-invalid-color: #585858;
+    --word-incorrect-position-color: #B59F3B;
+    --word-correct-position-color: #538D4E;
+    --error-notification-color: #5F0F1D;
+    --sucess-notification-color: #2B5028;
+    --new-game-color: #F9FF00;
+}
