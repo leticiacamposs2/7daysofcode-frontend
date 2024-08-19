@@ -8,8 +8,9 @@
 }
 
 :root {
+    --white: #FFFFFF;
     --theme-color: #14161C;
-    --clipboard-theme-color: #818384;
+    --keyboard-theme-color: #818384;
     --simple-color: #FFFFFF;
     --warning-color: #B59F3B;
     --valid-color: #538D4E;
@@ -70,4 +71,38 @@ main {
     font-size: 22px;
     text-transform: capitalize;
     font-weight: bold;
+}
+
+.keyboard {
+    margin: 50px auto 0;
+}
+
+.keyboard .row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.keyboard .letter,
+.keyboard .action {
+    align-items: center;
+    background-color: var(--keyboard-theme-color);
+    cursor: pointer;
+    display: flex;
+    font-size: 22px;
+    height: 58px;
+    justify-content: center;
+    transition: filter 0.2s;
+    width: 43px;
+}
+
+.keyboard .letter:hover,
+.keyboard .action:hover {
+    filter: brightness(0.8);
+}
+
+.keyboard .enter {
+    font-size: 17px;
+    width: 83px;
 }
