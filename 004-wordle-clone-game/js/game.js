@@ -33,19 +33,19 @@ async function iniciarJogo() {
 
 async function obterPalavras() {
 
-    const listaFrases = await carregarFrases();
+    const listaPalavras = await carregarFrases();
 
-    if (listaFrases.length === 0) {
+    if (listaPalavras.length === 0) {
         console.error('A lista de frases está vazia.');
         return;
     }
 
-    const frasesEmbaralhadas = embaralharArray(listaFrases);
-    const frasesSelecionadas = frasesEmbaralhadas.slice(0, 6);
+    const palavrasEmbaralhadas = embaralharLista(listaPalavras.words);
+    const palavrasSelecionadas = palavrasEmbaralhadas.slice(0, 6);
 
-    console.log("Lista de frases:", listaFrases);
-    console.log("Frases escolhidas:", JSON.stringify(frasesSelecionadas));
+    console.log("Lista de frases:", listaPalavras);
+    console.log("Frases escolhidas:", JSON.stringify(palavrasSelecionadas));
 
-    return frasesSelecionadas;
+    return palavrasSelecionadas;
 
 }

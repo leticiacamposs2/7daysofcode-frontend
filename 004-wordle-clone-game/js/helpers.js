@@ -52,10 +52,16 @@ function criarTeclado(teclas, teclado) {
     });
 }
 
-const embaralharArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+const embaralharLista = (lista) => {
+
+    for (let indice = lista.length; indice; indice--) {
+
+        const indiceAleatorio = Math.floor(Math.random() * indice);
+        const elemento = lista[indice - 1];
+
+        lista[indice - 1] = lista[indiceAleatorio];
+        lista[indiceAleatorio] = elemento;
     }
-    return array;
-};
+
+    return lista;
+}
