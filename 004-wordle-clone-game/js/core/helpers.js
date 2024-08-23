@@ -1,5 +1,5 @@
 
-function criarTabuleiro(rows, parentElement, colunas) {
+export function criarTabuleiro(rows, parentElement, colunas) {
 
     for (let i = 1; i <= rows; i++) {
 
@@ -20,7 +20,7 @@ function criarTabuleiro(rows, parentElement, colunas) {
 }
 
 
-function criarTeclado(teclas, teclado) {
+export function criarTeclado(teclas, teclado) {
 
     teclas.forEach((keys, teclaIndex) => {
         const row = document.createElement('div');
@@ -52,7 +52,8 @@ function criarTeclado(teclas, teclado) {
     });
 }
 
-const embaralharLista = (lista) => {
+
+export const embaralharLista = (lista) => {
 
     for (let indice = lista.length; indice; indice--) {
 
@@ -66,8 +67,7 @@ const embaralharLista = (lista) => {
     return lista;
 }
 
-module.exports = {
-    criarTabuleiro,
-    criarTeclado,
-    embaralharLista
-};
+
+export const ehVazioOuIndefinido = (valor) => {
+    return valor === undefined || valor === null;
+}

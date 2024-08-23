@@ -1,6 +1,6 @@
-const { exibirTabuleiro, exibirTeclado, iniciarJogo, obterPalavras } = require('../page/game.js');
-const { criarTabuleiro, criarTeclado, embaralharLista } = require('../core/helpers.js');
-const { carregarFrases } = require('../services/api.js');
+import { exibirTabuleiro, exibirTeclado, iniciarJogo, obterPalavras } from '../page/game.js';
+import { criarTabuleiro, criarTeclado, embaralharLista } from '../core/helpers.js';
+import { carregarFrases } from '../services/api.js';
 
 
 jest.mock('../core/helpers.js', () => ({

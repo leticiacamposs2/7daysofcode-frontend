@@ -1,4 +1,4 @@
-const { criarTabuleiro, criarTeclado, embaralharLista } = require('../core/helpers.js');
+import { criarTabuleiro, criarTeclado, embaralharLista } from '../core/helpers.js';
 
 
 test('cria o tabuleiro com o número correto de linhas e colunas', () => {

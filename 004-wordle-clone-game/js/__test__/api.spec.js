@@ -1,5 +1,4 @@
-const { carregarFrases } = require('../services/api.js');
-
+import { carregarFrases } from '../services/api.js';
 
 // Mockando a função fetch
 global.fetch = jest.fn();

@@ -1,4 +1,4 @@
-const carregarFrases = async () => {
+export async function carregarFrases() {
     return fetch('./data/lista-palavras.json')
         .then(async (response) => {
             if (!response.ok) {
@@ -10,7 +10,5 @@ const carregarFrases = async () => {
         .catch((error) => {
             console.error('Erro ao carregar as palavras:', error);
             return [];
-        })
+        });
 }
-
-module.exports = { carregarFrases };
