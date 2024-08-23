@@ -12,3 +12,5 @@ const carregarFrases = async () => {
             return [];
         })
 }
+
+module.exports = { carregarFrases };
