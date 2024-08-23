@@ -65,3 +65,9 @@ const embaralharLista = (lista) => {
 
     return lista;
 }
+
+module.exports = {
+    criarTabuleiro,
+    criarTeclado,
+    embaralharLista
+};

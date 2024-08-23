@@ -1,0 +1,16 @@
+{
+  "name": "004-wordle-clone-game",
+  "version": "1.0.0",
+  "description": "Este projeto é uma aplicação de jogo de palavras semelhante ao popular jogo **Wordle**. O objetivo do jogo é adivinhar uma palavra secreta em até 6 tentativas. A cada palpite, o jogador recebe um feedback visual que indica se as letras estão na posição correta, incorreta, ou não fazem parte da palavra.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --env=jest-environment-jsdom"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

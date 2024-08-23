@@ -1,3 +1,7 @@
+const { criarTabuleiro, criarTeclado, embaralharLista } = require('../core/helpers.js');
+const { carregarFrases } = require('../services/api.js');
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     exibirTabuleiro();
@@ -37,7 +41,7 @@ async function obterPalavras() {
 
     if (listaPalavras.length === 0) {
         console.error('A lista de frases está vazia.');
-        return;
+        return [];
     }
 
     const palavrasEmbaralhadas = embaralharLista(listaPalavras.words);
@@ -49,3 +53,10 @@ async function obterPalavras() {
     return palavrasSelecionadas;
 
 }
+
+module.exports = {
+    exibirTabuleiro,
+    exibirTeclado,
+    iniciarJogo,
+    obterPalavras
+};
