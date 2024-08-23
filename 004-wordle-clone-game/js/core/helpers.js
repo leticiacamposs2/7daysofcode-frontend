@@ -52,6 +52,7 @@ export function criarTeclado(teclas, teclado) {
     });
 }
 
+
 export const embaralharLista = (lista) => {
 
     for (let indice = lista.length; indice; indice--) {
@@ -64,4 +65,9 @@ export const embaralharLista = (lista) => {
     }
 
     return lista;
+}
+
+
+export const ehVazioOuIndefinido = (valor) => {
+    return valor === undefined || valor === null;
 }
