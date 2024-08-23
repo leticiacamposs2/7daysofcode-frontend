@@ -1,6 +1,5 @@
-const { criarTabuleiro, criarTeclado, embaralharLista } = require('../core/helpers.js');
-const { carregarFrases } = require('../services/api.js');
-
+import { criarTabuleiro, criarTeclado, embaralharLista } from '../core/helpers.js';
+import { carregarFrases } from '../services/api.js';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -54,9 +53,4 @@ async function obterPalavras() {
 
 }
 
-module.exports = {
-    exibirTabuleiro,
-    exibirTeclado,
-    iniciarJogo,
-    obterPalavras
-};
+export { exibirTabuleiro, exibirTeclado, iniciarJogo, obterPalavras };
