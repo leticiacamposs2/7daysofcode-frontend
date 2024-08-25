@@ -17,7 +17,7 @@ const teclas = [
 
 let palpiteAtual = '';
 let tentativasRestantes = 6;
-
+let indiceLinha = 1;
 
 function exibirTabuleiro() {
     const boardGameElement = document.querySelector('.board-game');
@@ -45,49 +45,59 @@ async function iniciarJogo() {
 
 function obterCliques() {
     document.addEventListener('click', function (event) {
-        const tecla = event.target.textContent;
-        validaClique(tecla);
+        if (event.target.tagName === 'BUTTON') {
+            const tecla = event.target.textContent.trim().toUpperCase();
+            validaClique(tecla, event.target);
+        }
     });
 }
 
 
-function validaClique(tecla) {
-
+function validaClique(tecla, targetElement) {
     if (tecla === 'ENTER') {
         validarPalpite();
 
-    } else if (tecla === 'ERASE') {
+    } else if (tecla === 'ERASE' || targetElement.classList.contains('erase')) {
         apagarUltimaLetra();
 
-    } else if (isTeclaValida(tecla)) {
-        adicionarLetra(tecla);
+    } else if (ehTeclaValida(tecla)) {
+        if (palpiteAtual.length < 5) {
+            adicionarLetra(tecla);
+            atualizarGrid();
+        }
 
     } else {
         console.log("VALOR INVÁLIDO", tecla);
     }
 }
 
-
-function isTeclaValida(tecla) {
+function ehTeclaValida(tecla) {
     const teclasValidas = teclas.flat(); // Transformar o array de arrays em um único array
     return teclasValidas.includes(tecla);
 }
 
 
 function adicionarLetra(tecla) {
-    if (palpiteAtual.length < 5) { // Adicionar letra se o palpite tiver menos de 5 letras
+    if (palpiteAtual.length < 5) {
         palpiteAtual += tecla;
         console.log("Letra adicionada:", palpiteAtual);
-    } else {
-        console.log("O palpite já tem 5 letras.");
     }
 }
 
 
 function apagarUltimaLetra() {
-    if (palpiteAtual.length > 0) {
-        palpiteAtual = palpiteAtual.slice(0, -1); // Remove a última letra do palpite
-        console.log("Palpite após apagar:", palpiteAtual);
+    if (palpiteAtual.length > 0)
+        palpiteAtual = palpiteAtual.slice(0, -1);
+    atualizarGrid();
+}
+
+function atualizarGrid() {
+    const linhaAtual = document.querySelector(`.row.row-${indiceLinha}`);
+    if (linhaAtual) {
+        const letras = linhaAtual.querySelectorAll('.letter');
+        letras.forEach((letraElement, index) => {
+            letraElement.textContent = palpiteAtual[index] || '';
+        });
     }
 }
 
@@ -98,12 +108,17 @@ async function validarPalpite() {
             const palavras = await obterPalavras();
             if (palavras.includes(palpiteAtual)) {
                 console.log("Palpite válido:", palpiteAtual);
-                // Aqui você pode adicionar lógica para processar o palpite
-                tentativasRestantes--; // Decrementar tentativas restantes
+                tentativasRestantes--;
+                indiceLinha++; // Mover para a próxima linha após um palpite válido
+                if (indiceLinha <= 6) { // Verificar se ainda há linhas disponíveis
+                    palpiteAtual = ''; // Limpar palpite atual após validação
+                    indiceColuna = 0; // Resetar coluna
+                } else {
+                    console.log("Você não tem mais tentativas.");
+                }
             } else {
                 console.log("Palpite inválido:", palpiteAtual);
             }
-            palpiteAtual = ''; // Limpar palpite atual após validação
         } else {
             console.log("Você não tem mais tentativas.");
         }
